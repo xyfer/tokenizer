@@ -9,8 +9,11 @@ I would say 80­90% of the time I spent coding this assignment was dealing with 
 The program provides the following output:
 
 tokenstream: { what the program sees as the incoming stream to be tokenized }
+
 delims : { lists each delimiter the program is using to tokenize the stream }
+
 numdelims : {number of delimiters }
+
 token: { a single token (the final output}, each on a new line}
 ;
 
