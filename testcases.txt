@@ -1,0 +1,166 @@
+FIRST 11 CASES WERE PROVIDED BY TA, 
+
+ALL YIELD CORRECT OUTPUT
+
+ MORE FOLLOW;
+
+1.
+cmd input: “\n” “hello\nworld”
+You get: “\n” “hello\nworld”
+Output: 
+hello
+world
+
+2.
+cmd input: “m” “mmmmm”
+You get: “m” “mmmmm”
+Output:
+3.
+
+cmd input: “e\v\t ” “hel\vlo \tworld”
+You get: “e\v\t ” “hel\vlo \tworld”
+Output: h
+l
+lo
+world
+4.
+
+cmd input: “” “You have to print out hex of \a”
+You get: “” “You have to print out hex of \a”
+Output: You have to print out hex of [0x07]
+5.
+
+cmd input: “\n” “”
+You get: “\n” “”
+Output:
+6.
+
+cmd input: “\k” “hello\kworld”
+You get: “\k” “hello\kworld”
+Output: 
+hello
+world
+
+7.
+cmd input: “k” “hello\kworld”
+You get: “k” “hello\kworld”
+Output: 
+hello
+world
+
+8.
+cmd input: “\\\\” “\\\\\\hello\\\\\\world\\\\”
+You get: “\\” “\\\hello\\\world\\”
+Output: 
+hello
+world
+
+9.
+cmd input: “\b\le” “ShE sells sEa shells by the sEa shorE\\”
+You get: “\b\le” “ShE sells sEa shells by the sEa shorE\”
+Output: 
+ShE s
+s sEa sh
+s by th
+ sEa shorE //whitespace at the beginning
+
+
+//Backslash at end
+10.
+cmd input: “\k\\” “hello\kworld”
+You get: “\k\” “hello\kworld”
+Output: 
+hello
+world
+
+11.
+cmd input: “” “\\\””
+You get: “” “\””
+Output: [0x22]
+
+12.
+
+cmd input: "\t\a\f" "well\thello\aguys\fsup"           //3 escape delimiters
+Output:
+well
+hello
+guys
+sup
+
+13.
+
+cmd input: "\t\z\f" "wellzhello\fguys\zsup"           //2 escape delimiters, one non-escape to be parsed seperately (just the z)
+Output:
+well
+hello
+guys
+sup
+
+14.
+
+cmd input: "\t" "hello\tworld\f"           //1 escape delimiter, one escape char to be hexed
+Output:
+hello
+world[0x0c]
+
+14.
+
+cmd input: "" "hello\tworld\f"           //multiple hexes
+Output:
+hello[0x09]world[0x0c]
+
+15.
+
+cmd input: " " "hello               world"    // space as delimiter, lots of them.
+Output:
+hello
+world
+
+15.
+
+cmd input: " \t" "hello \tgreat\tworld"    // space delim in conjuction with an escape delimiter
+Output:
+hello
+great
+world
+
+16. 
+
+cmd input: "\"" "\""         // tokenstream is the double-quote escape, but its also the delimiter - should print nothing
+Output:
+
+cmd input: "\z" "hey\guys\whatszgood"    // fake escape character as delimiter, should create 2 seperate delims "\" and "z"
+Output:
+hey
+guys
+whats
+good
+
+17:
+
+cmd input : "" ""  //empty
+Output:
+
+18:
+
+cmdinput: " " "\f \a \n"        //delimiting hex codes with spaces
+
+Output:
+[0x0c]
+[0x07]
+[0x0a]
+
+
+18.
+
+Too many args -> error msg
+
+
+19.
+Too few args -> error msg
+
+
+
+
+
+
