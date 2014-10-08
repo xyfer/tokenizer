@@ -10,9 +10,9 @@ The program provides the following output:
 
 **delims** : { lists each delimiter the program is using to tokenize the stream }
 
-**numdelims** : {number of delimiters }
+**numdelims** : { number of delimiters }
 
-**token**: { a single token (the final output}, each on a new line}
+**token**: { a single token, each on a new line}
 
 
 All of the test­-cases provided on the assignment specification and given to us by the TA produce the correct output, and I provided ~10 more to ensure tricky cases with multiple escape characters are handled correctly. I found some of the wording in the spec to be a little ambiguous regarding how specifically to deal with escape characters as delimiters vs. escape characters in the tokenstream, but I hope my program produces the desired outputs.
