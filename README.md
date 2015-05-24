@@ -1,7 +1,7 @@
 CS 214 TOKENZIER 
 =========
 
-I found that the main part of this assignment (getting a tokenstream to tokenize based on an argument of characters) was fairly easy to implement. The challenging part was the handling of escape characters, because what your program sees is not exactly what it entered into bash.
+I found that the main part of this assignment (getting a tokenstream to tokenize based on an argument of characters) was fairly easy to implement. The challenging part was the handling of escape characters, because what your program sees is not exactly what is entered into bash.
 I would say 80-90% of the time I spent coding this assignment was dealing with these pesky edge-cases, which resulted in a whole lot of checks for backslash characters and what comes after them.
 
 The program provides the following output:
